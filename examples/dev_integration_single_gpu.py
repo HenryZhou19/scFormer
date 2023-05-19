@@ -174,7 +174,7 @@ scf.utils.add_file_handler(logger, save_dir / "run.log")
 # %%
 data_dir = Path("../data/scib_datasets")
 if not data_dir.exists():
-    data_dir = Path("/mnt/shared_data/scib_datasets")
+    data_dir = Path("/data/share/ia_zjh/scFormer/examples/data")
 if dataset_name == "pancreas":
     adata = sc.read(
         str(data_dir / "human_pancreas_norm_complexBatch.h5ad"), cache=True

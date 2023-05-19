@@ -20,6 +20,8 @@ from gears import PertData, GEARS
 from gears.inference import compute_metrics, deeper_analysis, non_dropout_analysis
 from gears.utils import create_cell_graph_dataset_for_prediction
 
+import sys
+sys.path.append("../../")
 import scformer as scf
 from scformer.model import TransformerGenerator
 from scformer.tokenizer import tokenize_batch, pad_batch, tokenize_and_pad_batch

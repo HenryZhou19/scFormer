@@ -30,23 +30,26 @@ def _parse_args():
     parser.add_argument(
         "-d",
         "--data-source",
+        default='pbmc_dataset',
         type=str,
-        required=True,
+        # required=True,
         help='The name of the data source (currently support "scvi" datasets), or the '
         "path to the data file.",
     )
     parser.add_argument(
         "-m",
         "--model-dir",
+        default='save/pbmc-Jun09-22-32-2022/',
         type=str,
-        required=True,
+        # required=True,
         help="The path to the model directory.",
     )
     parser.add_argument(
         "-s",
         "--save-dir",
+        default="save/",
         type=str,
-        required=True,
+        # required=True,
         help="The directory to save the trained model and the results.",
     )
 

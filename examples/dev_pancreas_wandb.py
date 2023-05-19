@@ -22,6 +22,8 @@ from torchtext._torchtext import (
     Vocab as VocabPybind,
 )
 
+import sys
+sys.path.append("../")
 import scformer as scf
 from scformer.model import TransformerModel, AdversarialDiscriminator
 from scformer.tokenizer import tokenize_and_pad_batch, random_mask_value
@@ -54,7 +56,8 @@ hyperparameter_defaults = dict(
 )
 
 run = wandb.init(
-    config=hyperparameter_defaults, project="scFormer", entity="scformer", reinit=True
+    # config=hyperparameter_defaults, project="scFormer", entity="scformer", reinit=True,
+    config=hyperparameter_defaults, project="scFormer", reinit=True,
 )
 config = wandb.config
 
@@ -143,7 +146,7 @@ scf.utils.add_file_handler(logger, save_dir / "run.log")
 
 # %%
 adata = sc.read(
-    "../data/scib_datasets/human_pancreas_norm_complexBatch.h5ad", cache=True
+    "/data/share/ia_zjh/scFormer/examples/data/human_pancreas_norm_complexBatch.h5ad", cache=True
 )  # 16382 × 19093
 
 

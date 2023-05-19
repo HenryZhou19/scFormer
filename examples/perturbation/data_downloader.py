@@ -25,7 +25,7 @@ url_dict = {
 
 
 def download_data(data_name, key=None):
-    data_path = "./data/"
+    data_path = "../data/"
     if key is None:
         train_path = os.path.join(data_path, f"train_{data_name}.h5ad")
         valid_path = os.path.join(data_path, f"valid_{data_name}.h5ad")
